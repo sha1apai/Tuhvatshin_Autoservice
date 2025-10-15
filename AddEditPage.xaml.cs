@@ -38,7 +38,7 @@ namespace Tuhvatshin_Autoservice
                 errors.AppendLine("Укажите стоимость услуги");
             if (_currentService.DiscountIt<0||_currentService.DiscountIt>100 )
                 errors.AppendLine("Укажите скидку");
-            if (string.IsNullOrWhiteSpace(_currentService.Duration))
+            if (_currentService.Duration<0)
                 errors.AppendLine("Укажите название услуги");
             if(errors.Length>0)
             {

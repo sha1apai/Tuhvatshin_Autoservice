@@ -69,55 +69,61 @@
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientService.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DocumentByService.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FamiliyaModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FamiliyaModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FamiliyaModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FamiliyaModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FamiliyaModel.edmx</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Gender.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Manufacturer.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductPhoto.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductSale.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServicePhoto.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>FamiliyaModel.tt</DependentUpon>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TuhvatshinModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TuhvatshinModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TuhvatshinModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TuhvatshinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TuhvatshinModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TuhvatshinModel.edmx</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -140,6 +146,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SignUpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -159,17 +169,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="FamiliyaModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FamiliyaModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="FamiliyaModel.edmx.diagram">
-      <DependentUpon>FamiliyaModel.edmx</DependentUpon>
-    </None>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="TuhvatshinModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TuhvatshinModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TuhvatshinModel.edmx.diagram">
+      <DependentUpon>TuhvatshinModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -180,16 +191,6 @@
     <Resource Include="res\service_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FamiliyaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FamiliyaModel.Context.cs</LastGenOutput>
-      <DependentUpon>FamiliyaModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="FamiliyaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FamiliyaModel.edmx</DependentUpon>
-      <LastGenOutput>FamiliyaModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Услуги автосервиса\diz.jpg" />
     <Resource Include="Услуги автосервиса\rulevoe-upravlenie-avtomobilya.jpg" />
     <Resource Include="Услуги автосервиса\transmission.jpg" />
@@ -212,6 +213,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TuhvatshinModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TuhvatshinModel.edmx</DependentUpon>
+      <LastGenOutput>TuhvatshinModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TuhvatshinModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TuhvatshinModel.edmx</DependentUpon>
+      <LastGenOutput>TuhvatshinModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

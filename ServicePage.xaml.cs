@@ -238,5 +238,10 @@ namespace Tuhvatshin_Autoservice
                 ServiceListView.ItemsSource = Tuhvatshin_autoservisEntities.GetContext().Service.ToList();
             }
         }
+
+        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new SignUpPage((sender as Button).DataContext as Service));
+        }
     }
 }
