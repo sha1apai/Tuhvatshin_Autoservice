@@ -36,16 +36,38 @@ namespace Tuhvatshin_Autoservice
                 errors.AppendLine("Укажите название услуги");
             if (_currentService.Cost == 0)
                 errors.AppendLine("Укажите стоимость услуги");
-            if (_currentService.DiscountIt<0||_currentService.DiscountIt>100 )
-                errors.AppendLine("Укажите скидку");
-            if (_currentService.Duration<0)
-                errors.AppendLine("Укажите название услуги");
-            if(errors.Length>0)
+            if (_currentService.DiscountIt < 0 || _currentService.DiscountIt > 100)
+                errors.AppendLine("Укажите скидку от 1 до 100");
+            if (_currentService.Duration == 0)
+                errors.AppendLine("Укажите длительность услуги услуги");
+            if (_currentService.Duration > 601)
+                errors.AppendLine("Длитетельность не может быть больше 600 минут");
+            if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (_currentService.ID == 0)
+            var allServices = Tuhvatshin_autoservisEntities.GetContext().Service.ToList();
+            allServices = allServices.Where(p => p.Title == _currentService.Title).ToList();
+            if (allServices.Count == 0)
+            { 
+                if (_currentService.ID == 0)
+                    Tuhvatshin_autoservisEntities.GetContext().Service.Add(_currentService);
+            try
+            {
+                Tuhvatshin_autoservisEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена");
+                Manager.MainFrame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+            else
+            {
+                MessageBox.Show("Уже существует такая услуга");
+                if (_currentService.ID == 0)
                 Tuhvatshin_autoservisEntities.GetContext().Service.Add(_currentService);
             try
             {
